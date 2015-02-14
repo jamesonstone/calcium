@@ -5,24 +5,25 @@ public class Exercise2_13 {
 	public static void main(String[] args) {
    
    	Scanner input = new Scanner(System.in);
-   	Double saving;
-   	Double primary;
-   	Double current;
+   	double savings;
+      double total = 0.0;
+      int months;
+      int x = 0;
       
-   	System.out.println("What is the balance in your current savings?");
-      current = input.nextDouble();
-
-   	System.out.println("Enter a amount to deposit into savings account");
-      saving = input.nextDouble();
+   	System.out.println("Please enter the total amount of your savings account");
+      savings = input.nextDouble();
       
-   	primary = (saving1 * 0.00417) + saving + current;
-   	System.out.println("Your total monthly savings = " + primary);
+
+   	System.out.println("Please enter the number of months you'd like to project");
+      months = input.nextInt();
+      
+      while(x < months) {
+      	savings = savings + (savings * .00417);
+         x++;
+      }
+      
+   	System.out.println("After " + months + " months your balance will be " + savings);
 
 
-   	 if (saving > 0.00) {
-     			System.out.println("your total monthly saving =" + primary);
-       } else {
-      		System.out.println("No savings this month?");
-       }
     }
 }
